@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3 Text Overflow</title>
+    <style>
+        div[class^="text"]{
+            width: 300px;
+            overflow: hidden;
+            border:1px solid brown;
+            white-space: nowrap;
+            padding: 10px;
+        }
+
+        .text-clip{
+            text-overflow: clip;
+        }
+        
+        .text-ellipsis{
+            text-overflow: ellipsis;
+        }
+        
+        .text-custom{
+            text-overflow: "*****";
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Text overflow: clip (default)</h1>
+    <div class="text-clip">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias laborum sed blanditiis aut similique autem assumenda aperiam neque sit, quidem veritatis recusandae libero, molestiae sapiente atque doloribus eum unde saepe?
+    </div>
+
+    <h1>Text overflow: ellipsis</h1>
+    <div class="text-ellipsis">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias laborum sed blanditiis aut similique autem assumenda aperiam neque sit, quidem veritatis recusandae libero, molestiae sapiente atque doloribus eum unde saepe?
+    </div>
+
+    <h1>Text overflow: "***"</h1>
+    <div class="text-custom">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias laborum sed blanditiis aut similique autem assumenda aperiam neque sit, quidem veritatis recusandae libero, molestiae sapiente atque doloribus eum unde saepe?
+    </div>
+</body>
+</html>

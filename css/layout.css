@@ -1,0 +1,126 @@
+body{
+    font-family: Helvetica, sans-serif;
+    margin:0px;
+    padding:0px;
+}
+
+header{
+    width: 100%;
+    background-color: violet;
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+}
+
+.container{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container div{
+    float: left;
+    font-size: 20px;
+    color: #fff;
+}
+
+nav{
+    float: right;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+ul li{
+    float: left;
+    margin-left: 20px;
+}
+
+ul li a:link{
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none; /*นำเส้นใต้ลิงก์ออก*/
+}
+
+ul li a:visited{
+    color: #fff;
+}
+
+ul li a:hover{
+    color: yellow;
+    background: blue;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+
+/****** SECTION SLIDE *******/
+.slide{
+    height: 500px;
+    background: url('../images/foodbg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    top: 65px;
+}
+
+/****** SECTION FEATURE*****/
+.feature{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    margin-top: 120px;
+}
+
+.feature section{
+    width: 30%;
+    float: left;
+    margin-right: 40px;
+    text-align: center;
+}
+
+.feature section h1{
+    font-size:40px;
+    color: grey;
+    margin-bottom: 0px;
+}
+
+/**** CUSTOM ICON ****/
+.fas , .fab{
+    color: darkcyan;
+}
+
+/**** SECTION CONTENT****/
+.content{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    margin-top: 40px;
+}
+
+.content p{
+    font-size: 20px;
+}
+
+/**** GO TO TOP ****/
+.gototop{
+    font-size: 20px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.gototop a:link{
+    text-decoration: none;
+}
+
+
+

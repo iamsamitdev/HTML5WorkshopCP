@@ -1,0 +1,76 @@
+body{
+    background-color: chocolate;
+    font-family: Helvetica, sans-serif;
+}
+
+header, nav, footer, article, aside{
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+main{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header{
+    height: 100px;
+}
+
+nav{
+    height: 50px;
+}
+
+.main_section{
+    overflow: hidden;
+}
+
+.main_section section:nth-child(1){
+    width: 580px;
+    float: left; /*ชิดซ้าย*/
+    margin-right: 20px;
+}
+
+.main_section section:nth-child(1) article:nth-child(1){
+    height: 600px;
+}
+
+.main_section section:nth-child(1) article:nth-child(2){
+    height: 300px;
+}
+
+.main_section section:nth-child(2){
+    width: 100px;
+    float: left; /*ชิดซ้าย*/
+}
+
+.main_section section:nth-child(2) article:nth-child(1){
+    height: 300px;
+}
+
+.main_section section:nth-child(2) article:nth-child(2){
+    height: 280px;
+}
+
+.main_section section:nth-child(2) article:nth-child(3){
+    height: 300px;
+}
+
+.main_section section:nth-child(3){
+    width: 280px;
+    float: left; /*ชิดซ้าย*/
+    margin-left: 20px;
+}
+
+.main_section section:nth-child(3) aside{
+    height: 600px;
+}
+
+.main_section section:nth-child(3) article{
+    height: 300px;
+}
+
+footer{
+    height: 100px;
+}

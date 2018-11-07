@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3 Transform skew</title>
+    <style> 
+        h1{
+            text-align: center
+        }
+
+        .content{
+            width: 200px;
+            height: 200px;
+            border: 1px solid brown;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: aquamarine;
+            transition-property: transform;
+            transition-duration: 1s;
+            transition-timing-function: ease-in-out;
+        }
+
+        .content:active{    
+            transform: skew(10deg,5deg) scale(1.2,1.2);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>CSS3 Transform skew</h1>
+    <div class="content">
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum quae ratione, facere tempore sed, maxime aut hic animi qui obcaecati in, corporis odit iste ipsum veritatis voluptatem adipisci sint. Dolores.</p>
+    </div>
+</body>
+</html>

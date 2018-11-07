@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Local Storage</title>
+</head>
+<body>
+    
+    <div id="result"></div>
+    <button id="setLocalStorage" onclick="setstorage()">Set Local Storage</button>
+
+    <script>
+        document.getElementById("result").innerHTML = localStorage.getItem("fullname");
+        function setstorage()
+        {
+            alert("OK");
+            if(typeof(Storage) !== "undefined"){
+                localStorage.setItem("fullname","สามิตร โกยม");
+                // นำค่าไปแสดง
+                document.getElementById("result").innerHTML = localStorage.getItem("fullname");
+            }else{
+                document.write("Browser not support local storage");
+            }
+        }
+    </script>
+</body>
+</html>

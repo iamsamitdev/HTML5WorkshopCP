@@ -1,0 +1,58 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3 Animation</title>
+    <style>
+        #wrapper{
+            width: 500px;
+            height: 500px;
+            margin: 50px auto 0px auto;
+            border: 8px solid #23585c;
+            border-radius: 35px;
+        }
+
+        #content{
+            width: 50px;
+            height: 50px;
+            background-color: #fd5200;
+            border-radius: 50%;
+            position: relative;
+            /* เรียกใช้งาน keyframes */
+            animation: myanimation 2s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+        }
+
+        /*** สร้างชุด keyframes  ***/
+        @keyframes myanimation{
+            0% {
+                left: 0px;
+                top:0px;
+            }
+            25% {
+                top:150px;
+                left: 100px;
+            }
+            50% {
+                top:0px;
+                left: 200px;
+            }
+            75% {
+                top: 150px;
+                left:300px;
+            }
+            100% {
+                top:0px;
+                left: 450px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="content"></div>
+    </div>
+</body>
+</html>

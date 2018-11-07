@@ -1,0 +1,30 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3 Target</title>
+
+    <style>
+        div#content-primary:target{
+            border: 1px solid brown;
+        }
+
+        div#nav-primary:target{
+            border: 1px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#nav-primary">Go to nav primary</a><br>
+    <a href="#content-primary">Go to content primary</a>
+    <div id="nav-primary">D1</div>
+    <div id="content-primary">D2</div>
+    <div id="content-secondary">D3</div>
+    <div id="tertiary-content">D4</div>
+    <div id="nav-secondary">D5</div>
+</body>
+
+</html>

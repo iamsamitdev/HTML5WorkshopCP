@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5 Audio</title>
+</head>
+<body>
+    <h1>HTML5 Audio</h1>
+    <audio src="audio/SoundHelix.mp3" id="myAudio"></audio>
+
+    <button onclick="playAudio()">Play</button>
+    <button onclick="pauseAudio()">Pause</button>
+    <button onclick="stopAudio()">Stop</button>
+    <button onclick="demo()">OK</button>
+
+    <script>
+        var x = document.getElementById("myAudio");
+        function playAudio(){
+            x.play();
+        }
+        function pauseAudio(){
+            x.pause();
+        }
+        function stopAudio(){
+            x.pause();
+            x.currentTime = 0;
+        }
+    </script>
+</body>
+</html>

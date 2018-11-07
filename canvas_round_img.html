@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" media="all" href="css/reset.css" /> <!-- reset css -->
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+
+<style>
+    body{ background-color: ivory; }
+</style>
+
+<script>
+$(function(){
+
+    var canvas=document.getElementById("canvas");
+    var ctx=canvas.getContext("2d");
+
+    var img=new Image();
+    img.onload=function(){
+        ctx.save();
+        roundedImage(10,10,102,77,10);
+        ctx.clip();
+        ctx.drawImage(img,10,10,102,77);
+        ctx.restore();
+    }
+    img.src="https://dl.dropboxusercontent.com/u/139992952/stackoverflow/sky-bg2.jpg";
+
+
+    function roundedImage(x,y,width,height,radius){
+      ctx.beginPath();
+      ctx.moveTo(x + radius, y);
+      ctx.lineTo(x + width - radius, y);
+      ctx.quadraticCurveTo(x + width, y, x + width, y + radius);
+      ctx.lineTo(x + width, y + height - radius);
+      ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height);
+      ctx.lineTo(x + radius, y + height);
+      ctx.quadraticCurveTo(x, y + height, x, y + height - radius);
+      ctx.lineTo(x, y + radius);
+      ctx.quadraticCurveTo(x, y, x + radius, y);
+      ctx.closePath();
+    }
+
+}); // end $(function(){});
+</script>
+
+</head>
+
+<body>
+    <canvas id="canvas" width=300 height=300></canvas>
+</body>
+</html>

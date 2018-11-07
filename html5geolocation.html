@@ -1,0 +1,50 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5 Geolocation</title>
+</head>
+
+<body>
+    <button onclick="getLocation()">Show my location</button>
+    <button onclick="getLocationToMap()">Show my location</button>
+    <p id="demo"></p>
+    <div id="mapholder"></div>
+
+    <script>
+        var x = document.getElementById("demo");
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+
+        function getLocationToMap() {
+
+            if (navigator.geolocation) {
+                var geo = navigator.geolocation.getCurrentPosition();
+                console.log(geo);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+
+            // var latlon = position.coords.latitude + "," + position.coords.longitude;
+
+            // var img_url = "https://maps.googleapis.com/maps/api/staticmap?center="+latlon+" & zoom = 14 & size = 400 x300 & sensor = false & key = YOUR_: KEY ";
+
+            // document.getElementById("mapholder").innerHTML = "<img src='" + img_url + "'>";
+        }
+    </script>
+</body>
+
+</html>

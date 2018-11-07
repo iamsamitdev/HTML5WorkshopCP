@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HTML5 Canvas</title>
+</head>
+
+<body>
+<canvas id="myCanvas" width="578" height="500"></canvas>
+	<!--content-->
+    
+</canvas>
+<script>
+	var canvas = document.getElementById('myCanvas');
+	var canvas2 = document.getElementById('myCanvas');
+	var context = canvas.getContext('2d');
+	var context2 = canvas2.getContext('2d');
+	
+	context.beginPath();
+	context2.beginPath();
+	
+	// สีของเส้น
+    context.strokeStyle = '#000000';
+	context.moveTo(30, 80);
+    context.lineTo(200, 200);	
+	// ความหนา
+	context.lineWidth=5;
+	context.stroke();
+	 
+	 
+	// สีของเส้น
+    context2.strokeStyle = '#ff0000';
+	context2.moveTo(30, 80);
+    context2.lineTo(200, 0);	
+	// ความหนา
+	context2.lineWidth=5;
+	context2.stroke();
+	 
+</script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Canvas Circle</title>
+<style type="text/css">
+	body{
+		background-color:#09C;	
+	}
+	
+	div{
+		width:300px;
+		height:300px;
+		bottom: 0; 
+		left: 0; 
+		top: 0; 
+		right: 0;
+		margin: auto;
+		position: absolute;
+	}
+
+</style>
+</head>
+
+<body>
+<div><canvas id="myCanvas" width="300" height="300"></canvas></div>
+    <script>
+      var canvas = document.getElementById('myCanvas');
+      var context = canvas.getContext('2d');
+      var centerX = canvas.width / 2;
+      var centerY = canvas.height / 2;
+      var radius = 120;
+
+      context.beginPath();
+      context.arc(centerX, centerY, radius, 0, 2 * Math.PI, false);
+      context.fillStyle = 'orange';
+      context.fill();
+      context.lineWidth = 5;
+      context.strokeStyle = '#fff';
+	
+	  /*กำหนดข้อความใน canvas*/
+	  context.fillStyle = 'white'; /*สีข้อความ*/
+	  context.font="30px Arial";
+	  context.fillText("Hello Nerd",80,160);
+
+      context.stroke();
+    </script>
+</body>
+</html>

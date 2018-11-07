@@ -1,0 +1,87 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="fonts/fontawesome/css/all.min.css">
+    <title>HTML5 Layout</title>
+</head>
+
+<body>
+    <header>
+        <section class="container">
+            <div>LOGO</div>
+            <nav>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">SERVICE</a></li>
+                    <li><a href="#">PORTFOLIO</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+    <!-- SLIDE IMAGE -->
+    <a name="toppage"></a>
+    <section class="slide">
+        
+    </section>
+
+    <!-- FEATURE-->
+    <section class="feature">
+        <section>
+            <i class="fas fa-concierge-bell fa-7x"></i>
+            <h1>Our Services</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis aliquam ipsam eius ducimus, error</p>
+        </section>
+        <section>
+            <i class="fab fa-product-hunt fa-7x"></i>
+            <h1>Our Products</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis aliquam ipsam eius ducimus, error</p>
+        </section>
+        <section>
+            <i class="fas fa-user-friends fa-7x"></i>
+            <h1>Our Teams</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perspiciatis aliquam ipsam eius ducimus, error</p>
+        </section>
+    </section>
+
+    <section class="content">
+        <h1>Title Content</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo soluta consequuntur hic inventore, accusamus
+            sint sunt perspiciatis recusandae eos animi eaque aliquam in cumque laboriosam repellendus! Assumenda
+            placeat nihil adipisci?</p>
+
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo soluta consequuntur hic inventore, accusamus
+            sint sunt perspiciatis recusandae eos animi eaque aliquam in cumque laboriosam repellendus! Assumenda
+            placeat nihil adipisci?</p>
+
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illo soluta consequuntur hic inventore, accusamus
+            sint sunt perspiciatis recusandae eos animi eaque aliquam in cumque laboriosam repellendus! Assumenda
+            placeat nihil adipisci?</p>
+    </section>
+
+    <div class="gototop">
+        <a href="#toppage" class="scroll-to-top">
+            <i class="fas fa-angle-up"></i> TOP</a>
+    </div>
+
+    <script src="js/smoothscroll-master/src/smoothscroll.js"></script>
+
+    <script>
+        document.querySelector('.scroll-to-top')
+        .addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector('.slide').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+</body>
+
+</html>

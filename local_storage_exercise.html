@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Local Storage Exercise</title>
+</head>
+
+<body>
+    <h1>Register form</h1>
+    <form method="post" action="#" name="registerform">
+        <fieldset>
+
+            <div>
+                <label for="fullname">Fullname</label>
+                <input type="text" name="fullname" id="fullname">
+            </div>
+
+            <div>
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+
+            <div>
+                <label for="tel">Tel</label>
+                <input type="tel" name="tel" id="tel">
+            </div>
+
+            <div>
+                <input type="button" name="submit" id="submit" value="submit" onclick="submitform()">
+                <input type="button" name="clear" id="clear" value="Clear form" onclick="clearform()">
+            </div>
+        </fieldset>
+    </form>
+
+    <script>
+
+        function clearform()
+        {
+            registerform.fullname.value = "";
+            registerform.email.value = "";
+            registerform.tel.value = "";
+            localStorage.clear(); // เคลียร์ข้อมูลออกจาก local storage
+        }
+
+        function submitform(){
+            // รับค่าจากฟอร์ม
+            var fullname = registerform.fullname.value;
+            var email = registerform.email.value;
+            var tel = registerform.tel.value;
+            if(typeof(Storage) !== "undefined"){
+                // set variable to localstorage
+                localStorage.setItem("local_fullname",fullname);
+                localStorage.setItem("local_email",email);
+                localStorage.setItem("local_tel",tel);
+
+                // Redirect to result page
+                window.location = "result.html";
+            }else{
+                document.write("Browser not support local storage");
+            }
+        }
+
+        // set storage to input 
+        registerform.fullname.value = localStorage.getItem("local_fullname");
+        registerform.email.value = localStorage.getItem("local_email");
+        registerform.tel.value = localStorage.getItem("local_tel");
+
+    </script>
+</body>
+
+</html>

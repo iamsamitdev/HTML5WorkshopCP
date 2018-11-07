@@ -1,0 +1,50 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3 Background gradient</title>
+    <style>
+        body{
+            background-image: linear-gradient(rgb(0, 255, 191) 10%,white 50%);
+        }
+        #container{
+            width: 800px;
+            height: 600px;
+            border: 1px solid brown;
+            margin: 0 auto;
+            padding: 20px;
+            /* background-image: linear-gradient(red,yellow); */
+            /* background-image: linear-gradient(to right,red,yellow); */
+            /* background-image: linear-gradient(to bottom right,red,yellow); */
+            background-image: radial-gradient(red 5%,yellow 15%,green 60%);
+        }
+
+        h1:hover{
+            text-shadow: 0px 0px 3px yellow;
+        }
+
+        #content{
+            width: 200px;
+            border: 1px solid brown;
+            padding: 20px;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+        <h1>This is title page</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, ratione. Perspiciatis architecto, quam recusandae possimus doloribus harum tempora alias vitae autem quaerat minus non iusto sint, itaque eius cupiditate aliquam!</p>
+
+        <h2>Sub titel page</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos numquam perspiciatis molestiae mollitia, et eaque in itaque exercitationem libero ad praesentium, nemo amet fugit voluptatem impedit, magni provident doloremque natus?</p>
+
+        <div id="content">
+            aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabbbccccckessssssssssssssseesfasfsafsafsafasfas
+        </div>
+
+    </div>
+</body>
+</html>
